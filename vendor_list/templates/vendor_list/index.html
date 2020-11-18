@@ -10,8 +10,8 @@
 		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="{% static 'shopping_list/css/flatly.min.css' %}" />
-		<link rel="stylesheet" href="{% static 'shopping_list/css/styles.css' %}" />
+		<link rel="stylesheet" href="{% static 'vendor_list/css/flatly.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'vendor_list/css/styles.css' %}" />
 		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 
@@ -28,7 +28,7 @@
 
 </h2>
 
-					<form action="{% url 'shopping_list-add' %}" method="POST" role="form">
+					<form action="{% url 'vendor_list-add' %}" method="POST" role="form">
 						{% csrf_token %}
 						<div class="form-group">
 							<div class="input-group">
@@ -45,7 +45,7 @@
 					<div class="row t10">
 						<div class="col-lg-12">
 							<div class="btn-toolbar">
-								<a href="{% url 'shopping_list-delete' %}">
+								<a href="{% url 'vendor_list-delete' %}">
 									<button type="button" class="btn btn-danger btn-block">
 										<i class="fas fa-trash-alt"></i> Delete Itens Comprados
 									</button>
@@ -65,7 +65,7 @@
 						{% if i.complete %}
 							<li class="list-group-item todo-completed">{{i.item}}</li>
 						{% else %}
-							<a href="{% url 'shopping_list-bought' i.id %}"><li class="list-group-item">{{i.item}}</li></a>
+							<a href="{% url 'vendor_list-bought' i.id %}"><li class="list-group-item">{{i.item}}</li></a>
 						{% endif %}
 					{% endfor %}
 						
