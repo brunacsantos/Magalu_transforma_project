@@ -1,6 +1,6 @@
 from django.db import models
-
 from django.contrib.auth.models import User
+
 
 #class Post(models.Model):
 #	titulo = models.CharField(max_length=100)
@@ -12,7 +12,7 @@ from django.contrib.auth.models import User
 #	def __str__(self):
 #		return self.titulo
 
-class Shopping_List(models.Model):
+class Vendor_List(models.Model):
 	complete = models.BooleanField(default=False) #quando for True vc nao pode comprar mais
 	item = models.CharField(max_length=100)
 	
